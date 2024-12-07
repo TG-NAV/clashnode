@@ -871,7 +871,7 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url("/assets/website/img/clashnode/cta-bg.jpg") fixed center center;
+  background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url("/clashnode/assets/website/img/clashnode/cta-bg.jpg") fixed center center;
   background-size: cover;
   padding: 120px 0;
 }
