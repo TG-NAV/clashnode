@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://tg-nav.github.io/clashnode/news/article-20903.htm" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>在Vue项目中使用mock假数据模拟后端接口</title>
+        <meta name="description" content="安装 npm install --save-dev mockjs  引入  为了让mock中的数据只在开发环境中有效，防止其与生产环境的数据出现混淆，可以： 在config/dev.env.js文件中" />
+        <link rel="icon" href="__ADDON__/img/clashnode/favicon.ico" type="image/x-icon"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="/assets/website/js/frontend/clashnode/aos/aos.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/clashnode/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/clashnode/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/clashnode/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/clashnode/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/clashnode/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/clashnode/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="/assets/website/css/clashnode/style.css" rel="stylesheet">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P6MTV7MZZZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P6MTV7MZZZ');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1530351503997410"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container d-flex align-items-center">
+            <a href="/">
+                            <span class="logo me-auto">V2ray C</span>
+                        </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                                        <li><a class="nav-link" href="/">首页</a></li>
+                                        <li><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                        <li><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                        <li><a class="nav-link" href="#">关于</a></li>
+                    <li><a class="nav-link" href="#">联系</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+        </div>
+    </header><!-- End Header -->
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/news/">新闻资讯</a></li>
+                    <li>正文</li>
+                </ol>
+                <h1>在Vue项目中使用mock假数据模拟后端接口</h1>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <!-- ======= About Us Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                          				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <h2> <a id="_0" rel="nofollow"></a>安装</h2> <p>npm install --save-dev mockjs</p> <h2> <a id="_2" rel="nofollow"></a>引入</h2> <h4> <a id="mock_3" rel="nofollow"></a>为了让mock中的数据只在开发环境中有效，防止其与生产环境的数据出现混淆，可以：</h4> <p>在config/dev.env.js文件中加入 MOCK: ‘true’</p> <pre><code>module.exports = merge(prodEnv, {   NODE_ENV: '"development"',   MOCK: 'true', }) </code></pre> <p>在config/prod.env.js文件中加入 MOCK: ‘false’</p> <pre><code>module.exports = {   NODE_ENV: '"production"',   MOCK: 'false', } </code></pre> <p>在main,js中添加</p> <pre><code>process.env.MOCK &amp;&amp; require('@/mock') </code></pre> <h4> <a id="_24" rel="nofollow"></a>注意</h4> <p>此时想要项目运行不出错，需要先在src下新建一个mock目录，在mock目录下新建一个index.js文件<br /><img decoding="async" src="http://img.555519.xyz/uploads/20221229/70ad9b488f03d9aab0199d345bbffb1f.jpg" alt="在Vue项目中使用mock假数据模拟后端接口"></p> <h2> <a id="mock_27" rel="nofollow"></a>mock数据</h2> <pre><code>import Mock from 'mockjs' Mock.mock('/local-server/login', function () {   return {     data: {       RETCODE: 'AAAAAAA',       RETMSG: '登录成功'     }   } }) </code></pre> <h2> <a id="_39" rel="nofollow"></a>发起请求</h2> <pre><code>let data = [] this.$axios     .post('/local-server/login', data)     .then(res =&gt; {     //...     } </code></pre> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-20443.htm">央视推荐过的国产猫粮品牌 央视推荐过的国产猫粮品牌有哪些</a></p>
+                                        <p>下一个：<a href="/news/article-20904.htm">宠物领养市场分析（宠物领养市场分析论文）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-12-3-free-node-subscribe-links.htm" title="12月3日→20.8M/S|2024年最新免费节点clashnode订阅链接地址">12月3日→20.8M/S|2024年最新免费节点clashnode订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-20903.htm" title="在Vue项目中使用mock假数据模拟后端接口">在Vue项目中使用mock假数据模拟后端接口</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-2-free-node-subscribe.htm" title="12月2日→20.9M/S|2024年最新免费节点clashnode订阅链接地址">12月2日→20.9M/S|2024年最新免费节点clashnode订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-19530.htm" title="小型饲料颗粒机价格（小型饲料颗粒机价格是多少）">小型饲料颗粒机价格（小型饲料颗粒机价格是多少）</a></li>
+                        <li class="py-2"><a href="/news/article-19986.htm" title="将时间戳值增加微秒以将其转换为整数，MySQL将返回什么？">将时间戳值增加微秒以将其转换为整数，MySQL将返回什么？</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-30-free-high-speed-nodes.htm" title="11月30日→18.9M/S|2024年最新免费节点clashnode订阅链接地址">11月30日→18.9M/S|2024年最新免费节点clashnode订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-23-node-share-links.htm" title="11月23日→19.7M/S|2024年最新免费节点clashnode订阅链接地址">11月23日→19.7M/S|2024年最新免费节点clashnode订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-26-node-share-links.htm" title="11月26日→22.5M/S|2024年最新免费节点clashnode订阅链接地址">11月26日→22.5M/S|2024年最新免费节点clashnode订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-19987.htm" title="同安哪里有宠物医院最好（同安宠物狗店）">同安哪里有宠物医院最好（同安宠物狗店）</a></li>
+                        <li class="py-2"><a href="/news/article-20442.htm" title="被猫抓伤怎样判断用不用打狂犬疫苗（被猫抓伤怎么确定有没有狂犬病）">被猫抓伤怎样判断用不用打狂犬疫苗（被猫抓伤怎么确定有没有狂犬病）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">13</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section><!-- End About Us Section -->
+    </main><!-- End #main -->
+        <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container footer-bottom clearfix">
+            <div class="copyright">
+                <a href="/">clashnode免费梯子节点分享官网</a> 版权所有 Powered by WordPress
+            </div>
+            <div class="credits"></div>
+        </div>
+    </footer><!-- End Footer -->
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Vendor JS Files -->
+    <script src="/assets/website/js/frontend/clashnode/jquery-2.1.0.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnode/aos/aos.js"></script>
+    <script src="/assets/website/js/frontend/clashnode/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnode/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnode/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnode/php-email-form/validate.js"></script>
+    <script src="/assets/website/js/frontend/clashnode/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnode/waypoints/noframework.waypoints.js"></script>
+    <!-- Template Main JS File -->
+    <script src="/assets/website/js/frontend/clashnode/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+
+</body>
+
+</html>

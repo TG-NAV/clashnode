@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://tg-nav.github.io/clashnode/news/article-22274.htm" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>vite+element-plus项目基础搭建</title>
+        <meta name="description" content="vite+element-plus项目基础搭建      1.引言 2.为什么是Vite? 3.为什么是Element-plus? 4.项目搭建 5.参考文献       1.引言     其实本来不" />
+        <link rel="icon" href="__ADDON__/img/clashnode/favicon.ico" type="image/x-icon"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="/assets/website/js/frontend/clashnode/aos/aos.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/clashnode/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/clashnode/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/clashnode/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/clashnode/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/clashnode/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/clashnode/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="/assets/website/css/clashnode/style.css" rel="stylesheet">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P6MTV7MZZZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P6MTV7MZZZ');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1530351503997410"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container d-flex align-items-center">
+            <a href="/">
+                            <span class="logo me-auto">V2ray C</span>
+                        </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                                        <li><a class="nav-link" href="/">首页</a></li>
+                                        <li><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                        <li><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                        <li><a class="nav-link" href="#">关于</a></li>
+                    <li><a class="nav-link" href="#">联系</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+        </div>
+    </header><!-- End Header -->
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/news/">新闻资讯</a></li>
+                    <li>正文</li>
+                </ol>
+                <h1>vite+element-plus项目基础搭建</h1>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <!-- ======= About Us Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                          				  				  				<div id="content_views" class="markdown_views prism-tomorrow-night"> <div class="toc"> <h3>vite+element-plus项目基础搭建</h3> <ul> <li> <ul> <li> <ul> <li><a href="#1_1" rel="nofollow">1.引言</a></li> <li><a href="#2Vite_3" rel="nofollow">2.为什么是Vite?</a></li> <li><a href="#3Elementplus_7" rel="nofollow">3.为什么是Element-plus?</a></li> <li><a href="#4_9" rel="nofollow">4.项目搭建</a></li> <li><a href="#5_66" rel="nofollow">5.参考文献</a></li> </ul> </li> </ul> </li> </ul> </div> <h3><a id="1_1" rel="nofollow"></a>1.引言</h3> <p>    其实本来不应该写这种CSDN比较多的博文的，主要是因为比较多，然后想解决问题的时候有很多各种各样的文章，然后这些文章有各自的解决思路，甚至拿过来又不能解决问题，本着分享和方便以后使用的目的，记录这次使用过程。</p> <h3><a id="2Vite_3" rel="nofollow"></a>2.为什么是Vite?</h3> <p>    其实我最开始用的是vue-cli，但是使用的时候发现这个每次运行的时候都需要打包，导致运行的比较慢，得等个10几秒。加上看到Element-plus官网在配置教程里面甚至都没有放vue-cli的配置教程。在使用vue-cli引入的时候我又希望不是全部引入，因为很多组件是没必要的，也许正是因为这个Element-plus比较大，所以打包的时间平时使用的时候大更多。基于上述原因，我查了一下vite和vue-cli的区别：<br /> （1）vite打包速度快，能够利用浏览器对JavaScript 模块的原生支持，而vue-cli在打包上更像是webpack的一个超集，本身基于webpack来打包，又在webpack的基础上增加了很多脚手架，由于webpack将项目的各种依赖利用js串联起来，工作量相对较大，时间慢也是正常的；<br /> （2）由于Vite打包之后还是依赖于浏览器，所以对于低版本的浏览器支持的不是很好。</p> <h3><a id="3Elementplus_7" rel="nofollow"></a>3.为什么是Element-plus?</h3> <p>    因为之前没有使用过这个UI库，自己一个个组件的写太慢了。而且Element-plus热度也比较高。Element-plus本质是Element-UI对Vue3的支持更新，用来配合Vue3开发非常合适，相比之下，有很多UI框架还没能转到Vue3,不得不感叹前端发展实在是太快了，各种UI组件库，各种生态，这种来自于社区的依赖。</p> <h3><a id="4_9" rel="nofollow"></a>4.项目搭建</h3> <p>    好了不多说了，直接开始吧：</p> <pre><code class="prism language-shell"><span class="token function">npm</span> init vite@latest<span class="token operator">&lt;</span>app name<span class="token operator">&gt;</span> -- --template vue-ts</code></pre> <p>安装依赖、测试运行什么的就不说了，配置<code>vite.config.ts</code>（含修改端口方式）：</p> <pre><code class="prism language-javascript"><span class="token keyword">import</span><span class="token punctuation">{<!-- --></span> defineConfig<span class="token punctuation">}</span><span class="token keyword">from</span><span class="token string">'vite'</span><span class="token punctuation">;</span><span class="token keyword">import</span> vue<span class="token keyword">from</span><span class="token string">'@vitejs/plugin-vue'</span><span class="token punctuation">;</span><span class="token keyword">export</span><span class="token keyword">default</span><span class="token function">defineConfig</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>   plugins<span class="token operator">:</span><span class="token punctuation">[</span><span class="token function">vue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>   server<span class="token operator">:</span><span class="token punctuation">{<!-- --></span>     port<span class="token operator">:</span><span class="token number">8080</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre> <p>    安装<code>element-plus</code>依赖：<code>npm i element-plus</code> (使用-D主要是我们一般只是用生成的dist文件，用于生产环境)；安装 sass和sass-loader，方便之后使用element中提供的颜色主题和自己写sass一些样式。<br />     修改<code>tsconfig.json</code>，关闭打包时候的ts校验（<code>否则打包的时候会因为ts校验不通过而导致打包失败</code>）：<code>"skipLibCheck": true,</code>为了方便编译器提示加上：<code>"types": ["element-plus/global"],</code><br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220820/b780a5e4a62ce731c322927f775a51a2.jpg" alt="vite+element-plus项目基础搭建"><br />     入口文件：</p> <pre><code class="prism language-javascript"><span class="token keyword">import</span><span class="token punctuation">{<!-- --></span> createApp<span class="token punctuation">}</span><span class="token keyword">from</span><span class="token string">'vue'</span><span class="token punctuation">;</span><span class="token keyword">import</span> App<span class="token keyword">from</span><span class="token string">'./App.vue'</span><span class="token punctuation">;</span><span class="token keyword">import</span> router<span class="token keyword">from</span><span class="token string">'./router/index'</span><span class="token punctuation">;</span><span class="token keyword">import</span><span class="token string">'element-plus/dist/index.css'</span><span class="token punctuation">;</span><span class="token keyword">const</span> app<span class="token operator">=</span><span class="token function">createApp</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span><span class="token punctuation">;</span> app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>router<span class="token punctuation">)</span><span class="token punctuation">;</span> app<span class="token punctuation">.</span><span class="token function">mount</span><span class="token punctuation">(</span><span class="token string">'#app'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre> <p>    按需引入，安装官网提到的<code>unplugin-auto-import</code>和<code>unplugin-vue-components</code>依赖（<code>-D</code>就行），调整<code>vite.config.ts</code>文件：</p> <pre><code class="prism language-javascript"><span class="token keyword">import</span><span class="token punctuation">{<!-- --></span> defineConfig<span class="token punctuation">}</span><span class="token keyword">from</span><span class="token string">'vite'</span><span class="token punctuation">;</span><span class="token keyword">import</span> vue<span class="token keyword">from</span><span class="token string">'@vitejs/plugin-vue'</span><span class="token punctuation">;</span><span class="token keyword">import</span> AutoImport<span class="token keyword">from</span><span class="token string">'unplugin-auto-import/vite'</span><span class="token punctuation">;</span><span class="token keyword">import</span> Components<span class="token keyword">from</span><span class="token string">'unplugin-vue-components/vite'</span><span class="token punctuation">;</span><span class="token keyword">import</span><span class="token punctuation">{<!-- --></span> ElementPlusResolver<span class="token punctuation">}</span><span class="token keyword">from</span><span class="token string">'unplugin-vue-components/resolvers'</span><span class="token punctuation">;</span><span class="token keyword">export</span><span class="token keyword">default</span><span class="token function">defineConfig</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>   plugins<span class="token operator">:</span><span class="token punctuation">[</span><span class="token function">vue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">AutoImport</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>       resolvers<span class="token operator">:</span><span class="token punctuation">[</span><span class="token function">ElementPlusResolver</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">Components</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>       resolvers<span class="token operator">:</span><span class="token punctuation">[</span><span class="token function">ElementPlusResolver</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">]</span><span class="token punctuation">,</span>   server<span class="token operator">:</span><span class="token punctuation">{<!-- --></span>     port<span class="token operator">:</span><span class="token number">8080</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre> <p>实践测试，如果使用这种方法，那么每次会由这两个自动导入的依赖为我们引入我们自己写的<code>components</code>和<code>组件</code>：<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220820/ba932907174535335016fcc0b6c345e4.jpg" alt="vite+element-plus项目基础搭建"><br /> 如果全部引入那么文件大小1.4MB左右，如果按需引入只有400KB，所以还是按需引入比较香。</p> <h3><a id="5_66" rel="nofollow"></a>5.参考文献</h3> <p>    本次项目搭建看了很多文章，对我帮助比较大的是这三篇文章：<br /><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.jianshu.com/p/4ac5b3b9f483"  rel="nofollow">（1）搭建vite项目并配置路由和element-plus</a><br /><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://element-plus.gitee.io/zh-CN/guide/quickstart.html#%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE"  rel="nofollow">（2）Element官网配置教程</a><br /><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/buduoduoorg/article/details/113462959?utm_source=app&amp;app_version=5.3.0&amp;code=app_1562916241&amp;uLinkId=usr1mkqgl919blen"  rel="nofollow">（3）Vite和Vue CLI的优劣</a></p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-21819.htm">猫轻微抓伤怎么办图片（猫轻微抓伤用不用打狂犬疫苗）</a></p>
+                                        <p>下一个：<a href="/news/article-22275.htm">HamsterBear F1C200s  Linux v5.17 RTL8188EUS 适配</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-11-24-free-node-subscribe-links.htm" title="11月24日→22.4M/S|2024年最新免费节点clashnode订阅链接地址">11月24日→22.4M/S|2024年最新免费节点clashnode订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-2-free-node-subscribe.htm" title="12月2日→20.9M/S|2024年最新免费节点clashnode订阅链接地址">12月2日→20.9M/S|2024年最新免费节点clashnode订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-22-free-high-speed-nodes.htm" title="clashnode节点订阅每天更新18.4M/S免费节点订阅链接">clashnode节点订阅每天更新18.4M/S免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-20904.htm" title="宠物领养市场分析（宠物领养市场分析论文）">宠物领养市场分析（宠物领养市场分析论文）</a></li>
+                        <li class="py-2"><a href="/news/article-19986.htm" title="将时间戳值增加微秒以将其转换为整数，MySQL将返回什么？">将时间戳值增加微秒以将其转换为整数，MySQL将返回什么？</a></li>
+                        <li class="py-2"><a href="/news/article-21818.htm" title="开一个宠物寄养店怎么样（开一家宠物寄养店）">开一个宠物寄养店怎么样（开一家宠物寄养店）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-26-node-share-links.htm" title="11月26日→22.5M/S|2024年最新免费节点clashnode订阅链接地址">11月26日→22.5M/S|2024年最新免费节点clashnode订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-23-node-share-links.htm" title="11月23日→19.7M/S|2024年最新免费节点clashnode订阅链接地址">11月23日→19.7M/S|2024年最新免费节点clashnode订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-18675.htm" title="宠物粮食市场报告分析怎么写（宠物粮食销售）">宠物粮食市场报告分析怎么写（宠物粮食销售）</a></li>
+                        <li class="py-2"><a href="/news/article-19529.htm" title="动物疫苗稀释液首选（动物疫苗制备流程）">动物疫苗稀释液首选（动物疫苗制备流程）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">13</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section><!-- End About Us Section -->
+    </main><!-- End #main -->
+        <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container footer-bottom clearfix">
+            <div class="copyright">
+                <a href="/">clashnode免费梯子节点分享官网</a> 版权所有 Powered by WordPress
+            </div>
+            <div class="credits"></div>
+        </div>
+    </footer><!-- End Footer -->
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Vendor JS Files -->
+    <script src="/assets/website/js/frontend/clashnode/jquery-2.1.0.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnode/aos/aos.js"></script>
+    <script src="/assets/website/js/frontend/clashnode/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnode/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnode/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnode/php-email-form/validate.js"></script>
+    <script src="/assets/website/js/frontend/clashnode/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnode/waypoints/noframework.waypoints.js"></script>
+    <!-- Template Main JS File -->
+    <script src="/assets/website/js/frontend/clashnode/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+
+</body>
+
+</html>
