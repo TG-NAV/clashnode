@@ -9,19 +9,19 @@
 
 ### Clash订阅链接
 
-- https://tg-nav.github.io/clashnode//uploads/2024/12/0-20241207.yaml
-- https://tg-nav.github.io/clashnode//uploads/2024/12/1-20241207.yaml
-- https://tg-nav.github.io/clashnode//uploads/2024/12/2-20241207.yaml
-- https://tg-nav.github.io/clashnode//uploads/2024/12/3-20241207.yaml
-- https://tg-nav.github.io/clashnode//uploads/2024/12/4-20241207.yml
+- https://tg-nav.github.io//clashnode//uploads/2024/12/0-20241207.yaml
+- https://tg-nav.github.io//clashnode//uploads/2024/12/1-20241207.yaml
+- https://tg-nav.github.io//clashnode//uploads/2024/12/2-20241207.yaml
+- https://tg-nav.github.io//clashnode//uploads/2024/12/3-20241207.yaml
+- https://tg-nav.github.io//clashnode//uploads/2024/12/4-20241207.yml
 
 ### V2ray订阅链接
 
-- https://tg-nav.github.io/clashnode//uploads/2024/12/0-20241207.txt
-- https://tg-nav.github.io/clashnode//uploads/2024/12/1-20241207.txt
-- https://tg-nav.github.io/clashnode//uploads/2024/12/2-20241207.txt
-- https://tg-nav.github.io/clashnode//uploads/2024/12/3-20241207.txt
-- https://tg-nav.github.io/clashnode//uploads/2024/12/4-20241207.txt
+- https://tg-nav.github.io//clashnode//uploads/2024/12/0-20241207.txt
+- https://tg-nav.github.io//clashnode//uploads/2024/12/1-20241207.txt
+- https://tg-nav.github.io//clashnode//uploads/2024/12/2-20241207.txt
+- https://tg-nav.github.io//clashnode//uploads/2024/12/3-20241207.txt
+- https://tg-nav.github.io//clashnode//uploads/2024/12/4-20241207.txt
 
 ## 更多clash节点订阅 ：
 
