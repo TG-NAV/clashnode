@@ -73,9 +73,9 @@
     	},
     	CreateItem: function(time){
     		var tempDate = G.Fun.formatter_date(time)
-    		tempDateSplit = tempDate.split('/clashnode/');
+    		tempDateSplit = tempDate.split('/');
     		var title = tempDateSplit[1] + '月'+ tempDateSplit[2] +'日更新，'+tempDateSplit[0]+'年最新高速Shadowrocket/SSR/V2ray/Clash订阅链接免费节点订阅';
-    		var url = '/clashnode/newly-discovered-nodes/index.html?date=' + tempDate.replace(/\//g, '-');
+    		var url = '/newly-discovered-nodes/index.html?date=' + tempDate.replace(/\//g, '-');
     		var time = tempDateSplit[1] + '月'+ tempDateSplit[2] +'日';
 
     		return {title: title, url: url, time: time};
@@ -112,6 +112,25 @@
 
 	            window.open(url);
 	        })
+    	},
+    	BindDetailWebsite: function(){
+    		if ($('#share-website-info').length > 0)
+    		{
+	    		var name = $('#share-website-info').data('name');
+	    		var url = $('#share-website-info').data('url');
+
+	    		if (name != '' && url != '')
+	    		{
+	    			$.each($('h2:contains("订阅链接")'), function(i){
+	    				var item = $('h2:contains("订阅链接")').eq(i);
+	    				if (item.text() == '订阅链接')
+	    				{
+	    					var div = $('<div style="background:#fcf8e3;border:1px solid #faf3cd;border-left: 0.5rem solid #faf3cd;padding: 0.5rem;line-height:2rem;margin-top: 1rem;color:#c09853;">以下订阅链接均来自 <b>'+name+'</b> 分享，更多免费机场订阅可 <a href="'+url+'">【跳转查看】</a></div>');
+	    					item.after(div);
+	    				}
+	    			})
+	    		}
+	    	}
     	},
         //初始化操作
         init: function (page_code) {
@@ -152,13 +171,13 @@
 					var v2ray_rows = [];
 					for(var i=0;i<5;i++)
 					{
-						var clash_url = 'https://www.freeclashnode.com/clashnode//uploads/'+dateItems['year']+'/'+dateItems['month']+'/'+i+'-'+dateItems['year']+dateItems['month']+dateItems['day']+'.yaml';
+						var clash_url = 'https://www.freeclashnode.com/uploads/'+dateItems['year']+'/'+dateItems['month']+'/'+i+'-'+dateItems['year']+dateItems['month']+dateItems['day']+'.yaml';
 						clash_rows.push(clash_url);
 
-						var v2ray_url = 'https://www.freeclashnode.com/clashnode//uploads/'+dateItems['year']+'/'+dateItems['month']+'/'+i+'-'+dateItems['year']+dateItems['month']+dateItems['day']+'.txt';
+						var v2ray_url = 'https://www.freeclashnode.com/uploads/'+dateItems['year']+'/'+dateItems['month']+'/'+i+'-'+dateItems['year']+dateItems['month']+dateItems['day']+'.txt';
 						v2ray_rows.push(v2ray_url);
 					}
-					var singbox_rows = ['https://www.freeclashnode.com/clashnode//uploads/'+dateItems['year']+'/'+dateItems['month']+'/'+dateItems['year']+dateItems['month']+dateItems['day']+'.json'];
+					var singbox_rows = ['https://www.freeclashnode.com/uploads/'+dateItems['year']+'/'+dateItems['month']+'/'+dateItems['year']+dateItems['month']+dateItems['day']+'.json'];
 
 					$.each(clash_rows, function(i){
 						var clash_p = $('<p>'+clash_rows[i]+'</p>')
@@ -172,6 +191,7 @@
 
 				case 'detail':
 					G.Fun.BindTo();
+					G.Fun.BindDetailWebsite();
 					break;
 			}
         },
