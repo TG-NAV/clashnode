@@ -73,9 +73,9 @@
     	},
     	CreateItem: function(time){
     		var tempDate = G.Fun.formatter_date(time)
-    		tempDateSplit = tempDate.split('/');
+    		tempDateSplit = tempDate.split('/clashnode/');
     		var title = tempDateSplit[1] + '月'+ tempDateSplit[2] +'日更新，'+tempDateSplit[0]+'年最新高速Shadowrocket/SSR/V2ray/Clash订阅链接免费节点订阅';
-    		var url = '/newly-discovered-nodes/index.html?date=' + tempDate.replace(/\//g, '-');
+    		var url = '/clashnode/newly-discovered-nodes/index.html?date=' + tempDate.replace(/\//g, '-');
     		var time = tempDateSplit[1] + '月'+ tempDateSplit[2] +'日';
 
     		return {title: title, url: url, time: time};
