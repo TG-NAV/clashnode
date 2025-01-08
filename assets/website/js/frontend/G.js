@@ -30,6 +30,8 @@
         },
         formatter_date: function (time) {
             const date = typeof time == 'undefined' ? new Date() : new Date(time);
+            // 将日期加1天
+            date.setDate(date.getDate() + 1);
             const formattedDate = date.toLocaleString('zh-CN', { year: 'numeric', month: 'numeric', day: 'numeric' });
 
             return formattedDate;
@@ -70,7 +72,7 @@
             var tempDate = G.Fun.formatter_date(time);
             tempDateSplit = tempDate.split('/');
             var title = tempDateSplit[1] + '月' + tempDateSplit[2] + '日更新，' + tempDateSplit[0] + '年最新高速Shadowrocket/SSR/V2ray/Clash订阅链接免费节点订阅';
-            var url = '/clashnode/index.html?date=' + tempDate.replace(/\//g, '-');
+            var url = '/newly-discovered-nodes/index.html?date=' + tempDate.replace(/\//g, '-');
             var time = tempDateSplit[1] + '月' + tempDateSplit[2] + '日';
 
             return { title: title, url: url, time: time };
@@ -142,13 +144,13 @@
                     var clash_rows = [];
                     var v2ray_rows = [];
                     for (var i = 0; i < 5; i++) {
-                        var clash_url = 'https://www.freeclashnode.com/clashnode/uploads/' + dateItems['year'] + '/' + dateItems['month'] + '/' + i + '-' + dateItems['year'] + dateItems['month'] + dateItems['day'] + '.yaml';
+                        var clash_url = 'https://www.freeclashnode.com/clashnode//uploads/' + dateItems['year'] + '/' + dateItems['month'] + '/' + i + '-' + dateItems['year'] + dateItems['month'] + dateItems['day'] + '.yaml';
                         clash_rows.push(clash_url);
 
-                        var v2ray_url = 'https://www.freeclashnode.com/clashnode/uploads/' + dateItems['year'] + '/' + dateItems['month'] + '/' + i + '-' + dateItems['year'] + dateItems['month'] + dateItems['day'] + '.txt';
+                        var v2ray_url = 'https://www.freeclashnode.com/clashnode//uploads/' + dateItems['year'] + '/' + dateItems['month'] + '/' + i + '-' + dateItems['year'] + dateItems['month'] + dateItems['day'] + '.txt';
                         v2ray_rows.push(v2ray_url);
                     }
-                    var singbox_rows = ['https://www.freeclashnode.com/clashnode/uploads/' + dateItems['year'] + '/' + dateItems['month'] + '/' + dateItems['year'] + dateItems['month'] + dateItems['day'] + '.json'];
+                    var singbox_rows = ['https://www.freeclashnode.com/clashnode//uploads/' + dateItems['year'] + '/' + dateItems['month'] + '/' + dateItems['year'] + dateItems['month'] + dateItems['day'] + '.json'];
 
                     $.each(clash_rows, function (i) {
                         var clash_p = $('<p>' + clash_rows[i] + '</p>');
