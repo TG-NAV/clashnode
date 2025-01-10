@@ -20,11 +20,11 @@
 
 ### Clash订阅链接
 
-- https://a.nodeshare.xyz/uploads/2025/1/20250109.yaml
+- https://a.nodeshare.xyz/uploads/2025/1/20250110.yaml
 
 ### V2ray订阅链接
 
-- https://a.nodeshare.xyz/uploads/2025/1/20250109.txt
+- https://a.nodeshare.xyz/uploads/2025/1/20250110.txt
 
 
 ## 更多clash节点订阅 ：
