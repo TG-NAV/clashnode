@@ -1,4 +1,4 @@
-# 1月10日→28.45M/S|2024年最新免费节点clashnode订阅链接地址  更新时间 2025-1-10 10:21:39
+# 1月11日→28.73M/S|2024年最新免费节点clashnode订阅链接地址  更新时间 2025-1-11 10:21:39
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://tg-nav.github.io/clashnode" target="_blank">点击跳转</a>
 
 ## 靠谱机场汇总：
@@ -11,8 +11,6 @@
 | [spcloud](#ef) | [spcloud.vip](https://invite.spcloud.vip/#/register?code=vS77JVkP) | 无 | 10 元 200G/月 | ❌不支持 |
 | [FC](#ef) | [fastconnectcloud.net](https://www.fastconnectcloud.net/#/register?code=qGNvJ8Oy) | 无 | 10 元 200G/月 | ❌不支持 |
 | [星辰vpn](#%E9%BE%99%E7%8C%AB%E4%BA%91) | [t.xcvpn.us](https://t.xcvpn.us/#/register?code=tLBWwhPs) | 无 | 9.9元 140G/月 | ❌不支持 |
-| [宇宙机场](#aladdin) | [宇宙机场.com](https://xn--mesx3htbz31e.com/#/register?code=Cy7u71Ul) | 无 | 5元 1000G/月 | ❌不支持 | 暂无 |
-| [三分机场](#aladdin) | [uk.sanfen.me](https://uk.sanfen.me/register?code=D3AphwEh) | 无 | 8元 200G/季 | ❌不支持 | 暂无 |
 | [狗狗加速器](#%E9%BE%99%E7%8C%AB%E4%BA%91) | [dginv.click](https://www.dginv.click/#/register?code=yi5aid0d)| 无 | 9.9元 140G/月 | ❌不支持 |
 | [flybit](#flybit) | [goflybit.pages.dev](https://goflybit.pages.dev/#/register?code=iV0dLWfT) | 1天2G | 10元 100G/月 | ✔支持 |
 
@@ -20,11 +18,11 @@
 
 ### Clash订阅链接
 
-- https://a.nodeshare.xyz/uploads/2025/1/20250110.yaml
+- https://a.nodeshare.xyz/uploads/2025/1/20250111.yaml
 
 ### V2ray订阅链接
 
-- https://a.nodeshare.xyz/uploads/2025/1/20250110.txt
+- https://a.nodeshare.xyz/uploads/2025/1/20250111.txt
 
 
 ## 更多clash节点订阅 ：
