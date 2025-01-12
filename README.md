@@ -7,11 +7,11 @@
 
 | 机场名称 | 地址 | 试用 | 最便宜订阅 | 按流量购买 |
 | :------- | :--- | :--- | :--------- | :-------- |
-| [EF](#ef) | [www.efcloud1.com](https://www.efcloud1.com/#/register?code=Rg3jlrsW) | 无 | 10 元 200G/月 | ❌不支持 |
-| [spcloud](#ef) | [spcloud.vip](https://invite.spcloud.vip/#/register?code=vS77JVkP) | 无 | 10 元 200G/月 | ❌不支持 |
-| [FC](#ef) | [fastconnectcloud.net](https://www.fastconnectcloud.net/#/register?code=qGNvJ8Oy) | 无 | 10 元 200G/月 | ❌不支持 |
-| [星辰vpn](#%E9%BE%99%E7%8C%AB%E4%BA%91) | [t.xcvpn.us](https://t.xcvpn.us/#/register?code=tLBWwhPs) | 无 | 9.9元 140G/月 | ❌不支持 |
-| [狗狗加速器](#%E9%BE%99%E7%8C%AB%E4%BA%91) | [dginv.click](https://www.dginv.click/#/register?code=yi5aid0d)| 无 | 9.9元 140G/月 | ❌不支持 |
+| [EF](#ef) | [www.efcloud1.com](https://www.efcloud1.com/#/register?code=Rg3jlrsW) |  | 10 元 200G/月 |  |
+| [spcloud](#ef) | [spcloud.vip](https://invite.spcloud.vip/#/register?code=vS77JVkP) |  | 10 元 200G/月 |  |
+| [FC](#ef) | [fastconnectcloud.net](https://www.fastconnectcloud.net/#/register?code=qGNvJ8Oy) |  | 10 元 200G/月 |  |
+| [星辰vpn](#%E9%BE%99%E7%8C%AB%E4%BA%91) | [t.xcvpn.us](https://t.xcvpn.us/#/register?code=tLBWwhPs) |  | 9.9元 140G/月 |  |
+| [狗狗加速器](#%E9%BE%99%E7%8C%AB%E4%BA%91) | [dginv.click](https://www.dginv.click/#/register?code=yi5aid0d)|  | 9.9元 140G/月 |  |
 | [flybit](#flybit) | [goflybit.pages.dev](https://goflybit.pages.dev/#/register?code=iV0dLWfT) | 1天2G | 10元 100G/月 | ✔支持 |
 
 ## 订阅链接：
