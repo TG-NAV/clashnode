@@ -1,4 +1,4 @@
-# 1月23日→21.6M/S|2024年最新免费节点clashnode订阅链接地址  更新时间 2025-1-23 10:21:39
+# 1月24日→21.6M/S|2024年最新免费节点clashnode订阅链接地址  更新时间 2025-1-24 10:21:39
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://tg-nav.github.io/clashnode" target="_blank">点击跳转</a>
 
 ## 靠谱机场汇总：
@@ -8,44 +8,35 @@
 | 机场名称 | 地址 | 试用 | 最便宜订阅 | 按流量购买 |
 | :------- | :--- | :--- | :--------- | :-------- |
 | [冲上云霄](https://cpdd.one/?r=42354) | [https://cpdd.one](https://cpdd.one/?r=42354) | 1天 1G | 5元 150G/30天 | ✔支持 |
-| [EF](#ef) | [www.efcloud1.com](https://www.efcloud1.com/#/register?code=Rg3jlrsW) |  | 10 元 200G/月 |  |
-| [spcloud](#ef) | [spcloud.vip](https://invite.spcloud.vip/#/register?code=vS77JVkP) |  | 10 元 200G/月 |  |
-| [FC](#ef) | [fastconnectcloud.net](https://www.fastconnectcloud.net/#/register?code=qGNvJ8Oy) |  | 10 元 200G/月 |  |
-| [星辰vpn](#%E9%BE%99%E7%8C%AB%E4%BA%91) | [t.xcvpn.us](https://t.xcvpn.us/#/register?code=tLBWwhPs) |  | 9.9元 140G/月 |  |
-| [狗狗加速器](#%E9%BE%99%E7%8C%AB%E4%BA%91) | [dginv.click](https://www.dginv.click/#/register?code=yi5aid0d)|  | 9.9元 140G/月 |  |
-| [flybit](#flybit) | [goflybit.pages.dev](https://goflybit.pages.dev/#/register?code=iV0dLWfT) | 1天2G | 10元 100G/月 | ✔支持 |
+| [KK加速](#ef) | [www.efcloud1.com](https://kkjiasu.top/#/register?code=lhGhQflc |  | 10 元 200G/月 |  |
+| [西游云](https://goudan.site/#/register?code=LQzUg4EU) | [goudan.site](https://goudan.site/#/register?code=LQzUg4EU) |  | 9元 120G/月 |  |
+| [星辰vpn](https://t.xcvpn.us/#/register?code=tLBWwhPs) | [t.xcvpn.us](https://t.xcvpn.us/#/register?code=tLBWwhPs) |  | 9.9元 140G/月 |  |
+| [狗狗加速器](https://www.dginv.click/#/register?code=yi5aid0d) | [dginv.click](https://www.dginv.click/#/register?code=yi5aid0d)|  | 15.8元 140G/月 |  |
+| [flybit](https://goflybit.pages.dev/#/register?code=iV0dLWfT) | [goflybit.pages.dev](https://goflybit.pages.dev/#/register?code=iV0dLWfT) | 1天2G | 10元 100G/月 | ✔支持 |
 
 ## 订阅链接：
 
 ### Clash订阅链接
 
-- https://a.nodeshare.xyz/uploads/2025/1/20250123.yaml
+- https://a.nodeshare.xyz/uploads/2025/1/20250124.yaml
 
 ### V2ray订阅链接
 
-- https://a.nodeshare.xyz/uploads/2025/1/20250123.txt
+- https://a.nodeshare.xyz/uploads/2025/1/20250124.txt
 
 
 ## 更多clash节点订阅 ：
 
 
-### 高速机场推荐1【<a href="https://www.fastconnectcloud1.com//#/register?code=qGNvJ8Oy" target="_blank">FCCloud</a>】
+### 高速机场推荐1【<a href="https://goudan.site/#/register?code=LQzUg4EU" target="_blank">西游云</a>】
 
-- 新用户 8 折优惠 长期活动
+无视高峰，全天4K秒开，机房遍布全球，IP多多益善，99%流媒体解锁，油管、葫芦、奈菲，小电影丝般顺滑！ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选择，现在注册即可免费试用！
+- 网站注册地址：【<a href="https://goudan.site/#/register?code=LQzUg4EU" target="_blank">KK加速Cloud（点击注册）</a>】
 
-全场 8 折优惠券: new
-购买订阅时,优惠券填写 new 并验证,可获得八折优惠
-每位用户仅可用一次,老用户没用过也可以使用.下单时输入优惠码后点击验证，价格即会更新，费用低至0.33元/天,无视高峰，全天4K秒开，机房遍布全球，IP多多益善，99%流媒体解锁，油管、葫芦、奈菲，小电影丝般顺滑！ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选择，现在注册即可免费试用！
-- 网站注册地址：【<a href="https://www.fastconnectcloud1.com//#/register?code=qGNvJ8Oy" target="_blank">EFCloud（点击注册）</a>】
+### 高速机场推荐2【<a href="https://kkjiasu.top/#/register?code=lhGhQflc" target="_blank">KK加速Cloud</a>】
 
-### 高速机场推荐2【<a href="https://www.easyfastcloud.com/#/register?code=Rg3jlrsW" target="_blank">EFCloud</a>】
-
-- 新用户 8 折优惠 长期活动
-
-全场 8 折优惠券: new
-购买订阅时,优惠券填写 new 并验证,可获得八折优惠
-每位用户仅可用一次,老用户没用过也可以使用. 下单时输入优惠码后点击验证，价格即会更新，费用低至0.33元/天,无视高峰，全天4K秒开，机房遍布全球，IP多多益善，99%流媒体解锁，油管、葫芦、奈菲，小电影丝般顺滑！ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选择，现在注册即可免费试用！
-- 网站注册地址：【<a href="https://www.easyfastcloud.com/#/register?code=Rg3jlrsW" target="_blank">EFCloud（点击注册）</a>】
+无视高峰，全天4K秒开，机房遍布全球，IP多多益善，99%流媒体解锁，油管、葫芦、奈菲，小电影丝般顺滑！ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选择，现在注册即可免费试用！
+- 网站注册地址：【<a href="https://kkjiasu.top/#/register?code=lhGhQflc" target="_blank">KK加速Cloud（点击注册）</a>】
 
 
 ## 工具推荐
