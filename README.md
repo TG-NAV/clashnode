@@ -1,4 +1,4 @@
-# 1月27日→21.6M/S|2024年最新免费节点clashnode订阅链接地址  更新时间 2025-1-27 10:21:39
+# 1月28日→21.6M/S|2024年最新免费节点clashnode订阅链接地址  更新时间 2025-1-28 10:21:39
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://tg-nav.github.io/clashnode" target="_blank">点击跳转</a>
 
 ## 靠谱机场汇总：
@@ -18,15 +18,29 @@
 
 ### Clash订阅链接
 
-- https://a.nodeshare.xyz/uploads/2025/1/20250127.yaml
+- https://a.nodeshare.xyz/uploads/2025/1/20250128.yaml
 
 ### V2ray订阅链接
 
-- https://a.nodeshare.xyz/uploads/2025/1/20250127.txt
+- https://a.nodeshare.xyz/uploads/2025/1/20250128.txt
 
 
 ## 更多clash节点订阅 ：
 
+
+### [冰灵加速器](https://sulian.info/#/register?code=3R5DYYrL)
+
+注册链接：[点击进入](https://sulian.info/#/register?code=3R5DYYrL)
+
+试用：
+
+最便宜的订阅有5.9元 39G/月。
+
+便宜是真便宜，8.9 元钱买1个月，每个月 129 G 流量。自己用了一个多月，看视频完全不卡，下载游戏也很快。
+
+最大的缺点就是太便宜了
+
+* * *
 
 ### 高速机场推荐1【<a href="https://goudan.site/#/register?code=LQzUg4EU" target="_blank">西游云</a>】
 
