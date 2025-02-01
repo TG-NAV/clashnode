@@ -1,5 +1,5 @@
 {
-  "name": "tg-nav.github.io/clashnode",
+  "name": "tg-nav.github.io/clashnode/",
   "version": "1.0.0",
   "scripts": {
     "generate-sitemap": "node generate-sitemap.js"
