@@ -8,7 +8,7 @@ function getAllFiles(dirPath, arrayOfFiles) {
     arrayOfFiles = arrayOfFiles || [];
 
     files.forEach(function(file) {
-        if (['.git', '.github', 'assets', 'uploads', 'link','static','package.json','generate-sitemap.js','sw.js','ads.txt'].includes(file)) {
+        if (['.git', '.github', 'assets', 'uploads', 'link','static','package.json','generate-sitemap.js','package-lock.json','ads.txt'].includes(file)) {
             return;
         }
         if (fs.statSync(dirPath + '/' + file).isDirectory()) {
