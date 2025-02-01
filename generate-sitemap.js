@@ -28,6 +28,8 @@ function generateSitemap(files) {
 
     files.forEach(function(file) {
         const url = 'https://tg-nav.github.io/clashnode/' + file.replace('./', ''); // Update URL as needed
+          const lastmod = new Date().toISOString().split('T')[0]; // Current date as lastmod
+        
         xml += `\t<url>\n\t\t<loc>${url}</loc>\n\t</url>\n`;
     });
 
