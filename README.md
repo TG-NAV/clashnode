@@ -1,4 +1,4 @@
-# 3月13日→17.7M/S|2024年最新免费节点clashnode订阅链接地址  更新时间 2025-3-13 10:21:39
+# 3月16日→17.7M/S|2024年最新免费节点clashnode订阅链接地址  更新时间 2025-3-16 10:21:39
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://tg-nav.github.io/clashnode" target="_blank">点击跳转</a>
 
 ## 靠谱机场汇总：
@@ -18,11 +18,11 @@
 
 ### Clash订阅链接
 
-- https://a.nodeshare.xyz/uploads/2025/3/20250313.yaml
+- https://a.nodeshare.xyz/uploads/2025/3/20250316.yaml
 
 ### V2ray订阅链接
 
-- https://a.nodeshare.xyz/uploads/2025/3/20250313.txt
+- https://a.nodeshare.xyz/uploads/2025/3/20250316.txt
 
 
 ## 更多clash节点订阅 ：
