@@ -1,4 +1,4 @@
-# 6月9日→18.1M/S|2024年最新免费节点clashnode订阅链接地址  更新时间 2025-6-9 10:21:39
+# 6月10日→18.1M/S|2024年最新免费节点clashnode订阅链接地址  更新时间 2025-6-10 10:21:39
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://tg-nav.github.io/clashnode" target="_blank">点击跳转</a>
 
 ## 靠谱机场汇总：
@@ -17,15 +17,27 @@
 
 ### Clash订阅链接
 
-- https://a.nodeshare.xyz/uploads/2025/6/20250609.yaml
+- https://a.nodeshare.xyz/uploads/2025/6/20250610.yaml
 
 ### V2ray订阅链接
 
-- https://a.nodeshare.xyz/uploads/2025/6/20250609.txt
+- https://a.nodeshare.xyz/uploads/2025/6/20250610.txt
 
 
 ## 更多clash节点订阅 ：
 
+
+### [冲上云霄](https://cpdd.one/?r=42354)
+
+点击注册：[点击进入](https://cpdd.one/?r=42354)
+
+试用：1天 1G
+
+最便宜的订阅有10元 300G/30天。
+
+这是目前来看最便宜的机场，用户也比较多，节点质量过关。不限登录设备数，chatGPT 解锁奈飞、Disney、HBO、TVB、Happyon、AbemaTV 等在内的多种流媒体视频
+
+* * *
 
 ### [冰灵加速器](https://sulian.info/#/register?code=3R5DYYrL)
 
