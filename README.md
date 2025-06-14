@@ -1,4 +1,4 @@
-# 6月13日→18.1M/S|2024年最新免费节点clashnode订阅链接地址  更新时间 2025-6-13 10:21:39
+# 6月14日→18.1M/S|2024年最新免费节点clashnode订阅链接地址  更新时间 2025-6-14 10:21:39
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://tg-nav.github.io/clashnode" target="_blank">点击跳转</a>
 
 ## 靠谱机场汇总：
@@ -7,6 +7,7 @@
 
 | 机场名称 | 地址 | 试用 | 最便宜订阅 | 按流量购买 |
 | :------- | :--- | :--- | :--------- | :-------- |
+| [88云加速](https://88cloud.dpdns.org/#/register?code=LSpR3sOK) | [点击进入](https://88cloud.dpdns.org/#/register?code=LSpR3sOK) | 1天2G 	 | 10元 100G/月 | ✔支持 |
 | [冲上云霄](https://cpdd.one/?r=42354) | [点击进入](https://cpdd.one/?r=42354) | 1天 1G | 5元 150G/30天 | ✔支持 |
 | [西游云](https://goudan.site/#/register?code=LQzUg4EU) | [点击进入](https://goudan.site/#/register?code=LQzUg4EU) |  | 9元 120G/月 |  |
 | [星辰vpn](https://t.xcvpn.us/#/register?code=tLBWwhPs) | [点击进入](https://t.xcvpn.us/#/register?code=tLBWwhPs) |  | 9.9元 140G/月 |  |
