@@ -1,4 +1,4 @@
-# 6月18日→18.5M/S|2024年最新免费节点clashnode订阅链接地址  更新时间 2025-6-18 10:21:39
+# 6月19日→18.5M/S|2024年最新免费节点clashnode订阅链接地址  更新时间 2025-6-19 10:21:39
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://tg-nav.github.io/clashnode" target="_blank">点击跳转</a>
 
 ## 靠谱机场汇总：
@@ -18,6 +18,8 @@
 ### [【88云加速】](https://88cloud.dpdns.org/#/register?code=LSpR3sOK)
 
 原生支持解锁流媒体，内容包括 Netflix、Disney、HBO、TVB、Happyon、AbemaTV 等在内的多种流媒体视频
+
+10元 200G/月
 
 试用:1天2G
 
