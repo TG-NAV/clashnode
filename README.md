@@ -1,4 +1,4 @@
-# 6月21日→18.5M/S|2024年最新免费节点clashnode订阅链接地址  更新时间 2025-6-21 10:21:39
+# 6月22日→18.5M/S|2024年最新免费节点clashnode订阅链接地址  更新时间 2025-6-22 10:21:39
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://tg-nav.github.io/clashnode" target="_blank">点击跳转</a>
 
 ### 关注<span style="color: #ff0000;"><a style="color: #ff0000;" href="https://t.me/clashjd">「TG频道</a>」</span>可第一时间获得节点更新消息，还可解锁神秘高速节点！
@@ -12,7 +12,7 @@
 | [88云加速](https://88cloud.dpdns.org/#/register?code=LSpR3sOK) | [点击进入](https://88cloud.dpdns.org/#/register?code=LSpR3sOK) | 1天2G 	 | 10元 200G/月 | ✔支持 |
 | [冲上云霄](https://cpdd.one/?r=42354) | [点击进入](https://cpdd.one/?r=42354) | 1天 1G | 5元 150G/30天 | ✔支持 |
 | [西游云](https://88cloud.dpdns.org/#/register?code=LSpR3sOK) | [点击进入](https://88cloud.dpdns.org/#/register?code=LSpR3sOK) |  | 9元 120G/月 |  |
-| [星辰vpn](https://88cloud.dpdns.org/#/register?code=LSpR3sOK) | [点击进入](https://88cloud.dpdns.org/#/register?code=LSpR3sOK) |  | 9.9元 140G/月 |  |
+| [星辰vpn](https://t.xcvpn.us/#/register?code=jWv0CnPO) | [点击进入](https://t.xcvpn.us/#/register?code=jWv0CnPO) |  | 9.9元 140G/月 |  |
 | [狗狗加速器](https://www.dginv.click/#/register?code=yi5aid0d) | [点击进入](https://www.dginv.click/#/register?code=yi5aid0d)|  | 15.8元 140G/月 |  |
 | [flybit](https://goflybit.pages.dev/#/register?code=iV0dLWfT) | [点击进入](https://goflybit.pages.dev/#/register?code=iV0dLWfT) | 1天2G | 10元 100G/月 | ✔支持 |
 
@@ -36,11 +36,11 @@
 
 ### Clash订阅链接
 
-- https://a.nodeshare.xyz/uploads/2025/6/20250621.yaml
+- https://a.nodeshare.xyz/uploads/2025/6/20250622.yaml
 
 ### V2ray订阅链接
 
-- https://a.nodeshare.xyz/uploads/2025/6/20250621.txt
+- https://a.nodeshare.xyz/uploads/2025/6/20250622.txt
 
 
 ## 更多clash节点订阅 ：
