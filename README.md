@@ -37,11 +37,11 @@
 
 ### Clash订阅链接
 
-- https://a.nodeshare.xyz/uploads/2025/7/20250723.yaml
+- https://a.nodeshare.xyz/uploads/2025/7/20250724.yaml
 
 ### V2ray订阅链接
 
-- https://a.nodeshare.xyz/uploads/2025/7/20250723.txt
+- https://a.nodeshare.xyz/uploads/2025/7/20250724.txt
 
 
 ## 更多clash节点订阅 ：
