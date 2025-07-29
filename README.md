@@ -1,4 +1,4 @@
-## 更新时间 2025-07-28
+## 更新时间 2025-07-29
 # 2025年最新免费节点clash/v2ray免费节点clashnode订阅链接地址  
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://tg-nav.github.io/clashnode" target="_blank">点击跳转</a>
 
@@ -36,11 +36,11 @@
 
 ### Clash订阅链接
 
-- https://a.nodeshare.xyz/uploads/2025/7/20250728.yaml
+- https://a.nodeshare.xyz/uploads/2025/7/20250729.yaml
 
 ### V2ray订阅链接
 
-- https://a.nodeshare.xyz/uploads/2025/7/20250728.txt
+- https://a.nodeshare.xyz/uploads/2025/7/20250729.txt
 
 
 ## 更多clash节点订阅 ：
