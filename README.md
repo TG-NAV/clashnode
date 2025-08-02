@@ -36,11 +36,11 @@
 
 ### Clash订阅链接
 
-- https://a.nodeshare.xyz/uploads/2025/8/20250801.yaml
+- https://a.nodeshare.xyz/uploads/2025/8/20250802.yaml
 
 ### V2ray订阅链接
 
-- https://a.nodeshare.xyz/uploads/2025/8/20250801.txt
+- https://a.nodeshare.xyz/uploads/2025/8/20250802.txt
 
 
 ## 更多clash节点订阅 ：
