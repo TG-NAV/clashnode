@@ -36,11 +36,11 @@
 
 ### Clash订阅链接
 
-- https://a.nodeshare.xyz/uploads/2025/8/20250826.yaml
+- https://a.nodeshare.xyz/uploads/2025/8/20250827.yaml
 
 ### V2ray订阅链接
 
-- https://a.nodeshare.xyz/uploads/2025/8/20250826.txt
+- https://a.nodeshare.xyz/uploads/2025/8/20250827.txt
 
 
 ## 更多clash节点订阅 ：
@@ -58,7 +58,7 @@
 
 * * *
 <h3></h3>
-<h3><span style="color: #ff0000;">🚀 <a style="color: #ff0000;" href="https://138.2.82.216/#/register?code=7Y5uXPTq">飞鸟加速&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 点击注册</a> </span></h3>
+<h3><span style="color: #ff0000;">🚀 <a style="color: #ff0000;" href="https://www.112112789.xyz/?path=register&code=7Y5uXPTq">飞鸟加速&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 点击注册</a> </span></h3>
 <h3>· 高速·稳定·无限可能</h3>
 <h3>1. 多地专线高速节点，极速跨境体验，告别卡顿与延迟！</h3>
 <h3>2. 一键解锁Netflix、Disney+、TikTok等全球流媒体，尽享自由精彩！</h3>
