@@ -47,15 +47,15 @@
 
 ### Clash订阅链接
 
-- https://a.nodeshare.xyz/uploads/2025/11/20251121.yaml
+- https://a.nodeshare.xyz/uploads/2025/11/20251122.yaml
 
 ### V2ray订阅链接
 
-- https://a.nodeshare.xyz/uploads/2025/11/20251121.txt
+- https://a.nodeshare.xyz/uploads/2025/11/20251122.txt
 
 ### sing-box订阅链接
 
-- https://a.nodeshare.xyz/uploads/2025/11/20251121.json
+- https://a.nodeshare.xyz/uploads/2025/11/20251122.json
 
 
 ## 更多clash节点订阅 ：
