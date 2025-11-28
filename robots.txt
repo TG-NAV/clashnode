@@ -2,4 +2,5 @@ User-agent: *
 Disallow:
 Disallow: /bin/
 
-sitemap: https://a353502.sitemaphosting7.com/4633991/sitemap_4633991.xml
+Sitemap: https://a353502.sitemaphosting7.com/4633991/sitemap_4633991.xml
+Sitemap: https://tg-nav.github.io/clashnode/sitemap.xml
