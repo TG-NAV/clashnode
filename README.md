@@ -48,15 +48,15 @@
 
 ### Clash订阅链接
 
-- https://sfdr.zaixianyouxi.dpdns.org/uploads/2025/12/20251230.yaml
+- https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/1/20260102.yaml
 
 ### V2ray订阅链接
 
-- https://sfdr.zaixianyouxi.dpdns.org/uploads/2025/12/20251230.txt
+- https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/1/20260102.txt
 
 ### sing-box订阅链接
 
-- https://sfdr.zaixianyouxi.dpdns.org/uploads/2025/12/20251230.json
+- https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/1/20260102.json
 
 
 ## 更多clash节点订阅 ：
