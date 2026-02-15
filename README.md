@@ -1,4 +1,4 @@
-## 更新时间 2026-02-14
+## 更新时间 2026-02-15
 # 2025年最新免费节点clash/v2ray免费节点clashnode订阅链接地址  
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://tg-nav.github.io/clashnode" target="_blank">点击跳转</a>
 
@@ -47,31 +47,20 @@
 
 ### Clash订阅链接
 
-- https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/2/20260213.yaml
+- https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/2/20260215.yaml
 
 ### V2ray订阅链接
 
-- https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/2/20260213.txt
+- https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/2/20260215.txt
 
 ### sing-box订阅链接
 
-- https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/2/20260213.json
+- https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/2/20260215.json
 
 
 ## 更多clash节点订阅 ：
 
 
-### [冲上云霄](https://cpdd.one/?r=42354)
-
-点击注册：[点击进入](https://cpdd.one/?r=42354)
-
-试用：1天 1G
-
-最便宜的订阅有10元 300G/30天。
-
-这是目前来看最便宜的机场，用户也比较多，节点质量过关。不限登录设备数，chatGPT 解锁奈飞、Disney、HBO、TVB、Happyon、AbemaTV 等在内的多种流媒体视频
-
-* * *
 <h3></h3>
 <h3><span style="color: #ff0000;">🚀 <a style="color: #ff0000;" href="https://www.112112789.xyz/?path=register&code=7Y5uXPTq">飞鸟加速&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 点击注册</a> </span></h3>
 <h3>· 高速·稳定·无限可能</h3>
