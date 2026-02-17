@@ -1,4 +1,4 @@
-## 更新时间 2026-02-16
+## 更新时间 2026-02-17
 # 2025年最新免费节点clash/v2ray免费节点clashnode订阅链接地址  
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://tg-nav.github.io/clashnode" target="_blank">点击跳转</a>
 
@@ -47,15 +47,15 @@
 
 ### Clash订阅链接
 
-- https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/2/20260216.yaml
+- https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/2/20260217.yaml
 
 ### V2ray订阅链接
 
-- https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/2/20260216.txt
+- https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/2/20260217.txt
 
 ### sing-box订阅链接
 
-- https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/2/20260216.json
+- https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/2/20260217.json
 
 
 ## 更多clash节点订阅 ：
