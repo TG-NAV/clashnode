@@ -14,7 +14,7 @@
 | [星辰vpn](https://c.xcvpn.me/#/register?code=jWv0CnPO) | [点击进入](https://c.xcvpn.me/#/register?code=jWv0CnPO) |  | 9.9元 140G/月 |  |
 | [狗狗加速器](https://www.dginv.click/#/register?code=yi5aid0d) | [点击进入](https://www.dginv.click/#/register?code=yi5aid0d)|  | 15.8元 140G/月 |  |
 | [flybit](https://flybit.vip/#/register?code=iV0dLWfT) | [点击进入](https://flybit.vip/#/register?code=iV0dLWfT) |  | 10元 100G/月 | ✔支持 |
-| [西游云](https://www.xiyou666.xyz/?code=2mVFWPT1) | [点击进入](https://www.xiyou666.xyz/?code=2mVFWPT1) |  | 9元 120G/月 |  |
+| [西游云](https://c.xiyou666.xyz/?code=2mVFWPT1) | [点击进入](https://c.xiyou666.xyz/?code=2mVFWPT1) |  | 9元 120G/月 |  |
 
 
 ### [【88云加速】](https://88cloud.pages.dev/#/register?code=LSpR3sOK)
