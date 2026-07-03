@@ -55,15 +55,15 @@
 
 ### Clash订阅链接
 
-- https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/7/20260702.yaml
+- https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/7/20260703.yaml
 
 ### V2ray订阅链接
 
-- https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/7/20260702.txt
+- https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/7/20260703.txt
 
 ### sing-box订阅链接
 
-- https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/7/20260702.json
+- https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/7/20260703.json
 
 
 ## 更多clash节点订阅 ：
