@@ -38,7 +38,7 @@
 
 - 绿牛云 - 稳定高速的绿色云加速服务
 - 绿牛云提供稳定、高速、安全的全球网络加速服务。精选优质线路，覆盖主流区域，帮助跨境办公、学习与娱乐保持顺畅连接。
-- 网站注册地址：【<a href="https://www.nfsq.us/#/register?code=CH8dmRTt" target="_blank">绿牛云（点击注册）</a>】
+### - 网站注册地址：【<a href="https://www.nfsq.us/#/register?code=CH8dmRTt" target="_blank">绿牛云（点击注册）</a>】
 ***
 <h3></h3>
 <h3><span style="color: #ff0000;">🚀 <a style="color: #ff0000;" href="https://138.2.82.216/#/register?code=7Y5uXPTq">飞鸟加速&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 点击注册</a> </span></h3>
@@ -55,15 +55,15 @@
 
 ### Clash订阅链接
 
-- https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/8/20260813.yaml
+- https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/8/20260815.yaml
 
 ### V2ray订阅链接
 
-- https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/8/20260813.txt
+- https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/8/20260815.txt
 
 ### sing-box订阅链接
 
-- https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/8/20260813.json
+- https://sfdr.zaixianyouxi.dpdns.org/uploads/2026/8/20260815.json
 
 
 ## 更多clash节点订阅 ：
@@ -79,17 +79,7 @@
 <h3></h3>
 
 
-### [冰灵加速器](https://c1.bingclub.xyz/#/register?code=3R5DYYrL)
 
-注册链接：[点击进入](https://c1.bingclub.xyz/#/register?code=3R5DYYrL)
-
-试用：
-
-最便宜的订阅有5.9元 39G/月。
-
-便宜是真便宜，8.9 元钱买1个月，每个月 129 G 流量。自己用了一个多月，看视频完全不卡，下载游戏也很快。
-
-最大的缺点就是太便宜了
 
 * * *
 
