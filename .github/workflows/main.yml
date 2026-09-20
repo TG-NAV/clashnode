@@ -1,4 +1,4 @@
-name: Auto Create Today Post & Update Indexes
+name: Auto Create Today Post & Paging Indexes
 
 on:
   workflow_dispatch: # 允许在 GitHub 后台手动触发
@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: 执行脚本生成文章、更新内容及索引
+      - name: 执行脚本生成文章、分页及索引
         run: |
           python - << 'EOF'
           import os
@@ -37,20 +37,18 @@ jobs:
           today = datetime.date.today()
           today_year = today.strftime('%Y')
           today_month_no_zero = str(today.month)
-          today_month_zero = today.strftime('%m')
+          today_month_zero = str(today.strftime('%m'))
           today_day_no_zero = str(today.day)
-          today_day_zero = today.strftime('%d')
+          today_day_zero = str(today.strftime('%d'))
           
-          # 新文件名及正文统一使用的无补零日期格式 (例如: 2026-9-20)
           today_file_date_str = f"{today_year}-{today_month_no_zero}-{today_day_no_zero}"
-          today_standard_date_str = f"{today_year}-{today_month_zero}-{today_day_zero}"
-
-          target_chinese_date = f"{today_year}年{today_month_no_zero}月{today_day_no_zero}日"
-          target_short_chinese_date = f"{today_month_no_zero}月{today_day_no_zero}日"
+          target_chinese_date = f"{today_month_no_zero}月{today_day_no_zero}日"
+          target_full_chinese_date = f"{today_year}年{today_month_no_zero}月{today_day_no_zero}日"
           target_slash_date = f"{today_year}/{today_month_no_zero}/{today_day_no_zero}"
           target_compact_date = f"{today_year}{today_month_zero}{today_day_zero}"
 
           new_basename = ""
+          random_speed_str = f"{round(random.uniform(10.0, 35.0), 1)}M/S"
 
           # ----------------- 1. 处理 free-nodes 目录下的最新文章 (.htm) -----------------
           all_files = glob.glob(os.path.join(posts_dir, "*.htm")) + glob.glob(os.path.join(posts_dir, "*.html")) + glob.glob(os.path.join(posts_dir, "*.md"))
@@ -62,118 +60,153 @@ jobs:
                   valid_files.append((basename, file))
 
           if valid_files:
-              # 按文件名降序排序，获取最新的文件
               valid_files.sort(key=lambda x: x[0], reverse=True)
               latest_basename, latest_file = valid_files[0]
-              print(f"Latest file found: {latest_file}")
 
-              # 提取旧文件名中的日期
               date_match = re.match(r'^(\d{4})-(\d{1,2})-(\d{1,2})', latest_basename)
               old_year, old_month, old_day = date_match.groups()
               old_date_dash_1 = f"{old_year}-{old_month}-{old_day}"
               old_date_dash_2 = f"{old_year}-{int(old_month):02d}-{int(old_day):02d}"
 
               if old_date_dash_1 == today_file_date_str or old_date_dash_2 == today_file_date_str:
-                  print("The latest post is already dated today. Using today's filename for index check.")
                   new_basename = latest_basename
               else:
-                  # 生成新文件名
                   new_basename = latest_basename.replace(old_date_dash_1, today_file_date_str, 1)
                   if new_basename == latest_basename:
                       new_basename = latest_basename.replace(old_date_dash_2, today_file_date_str, 1)
                   
                   new_file = os.path.join(posts_dir, new_basename)
 
-                  if os.path.exists(new_file):
-                      print(f"File {new_file} already exists.")
-                  else:
-                      # 读取上一天的文章内容
+                  if not os.path.exists(new_file):
                       with open(latest_file, 'r', encoding='utf-8') as f:
-                        content = f.read()
+                          content = f.read()
 
-                      # 更新文章内容里的日期
                       new_content = re.sub(r'\b20\d{2}-\d{1,2}-\d{1,2}\b', today_file_date_str, content)
-                      new_content = re.sub(r'20\d{2}年\d{1,2}月\d{1,2}[日号]', target_chinese_date, new_content)
-                      new_content = re.sub(r'\b\d{1,2}月\d{1,2}[日号]', target_short_chinese_date, new_content)
+                      new_content = re.sub(r'20\d{2}年\d{1,2}月\d{1,2}[日号]', target_full_chinese_date, new_content)
+                      new_content = re.sub(r'\b\d{1,2}月\d{1,2}[日号]', target_chinese_date, new_content)
                       new_content = re.sub(r'\b20\d{2}/\d{1,2}/\d{1,2}\b', target_slash_date, new_content)
                       new_content = re.sub(r'\b20\d{2}\d{2}\d{2}\b', target_compact_date, new_content)
 
-                      # 随机替换测速数字
                       def random_speed(match):
+                          nonlocal random_speed_str
                           val = round(random.uniform(10.0, 35.0), 1)
                           suffix = match.group(2)
-                          return f"{val}{suffix}"
+                          random_speed_str = f"{val}{suffix}"
+                          return random_speed_str
 
                       new_content = re.sub(r'\b\d+(\.\d+)?([Mm][Bb]?/[Ss]|[Mm][Bb][Pp][Ss])\b', random_speed, new_content)
 
-                      # 写入新生成的当天文章文件
                       with open(new_file, 'w', encoding='utf-8') as f:
                           f.write(new_content)
-
-                      print(f"Successfully created new post: {new_file} with updated dates and speed")
 
           # ----------------- 2. 自动更新根目录下的 README.md -----------------
           readme_path = "README.md"
           if os.path.exists(readme_path):
               with open(readme_path, 'r', encoding='utf-8') as f:
                   readme_content = f.read()
-
               readme_content = re.sub(r'\b20\d{2}-\d{1,2}-\d{1,2}\b', today_file_date_str, readme_content)
-              readme_content = re.sub(r'20\d{2}年\d{1,2}月\d{1,2}[日号]', target_chinese_date, readme_content)
-              readme_content = re.sub(r'\b\d{1,2}月\d{1,2}[日号]', target_short_chinese_date, readme_content)
-              readme_content = re.sub(r'\b20\d{2}/\d{1,2}/\d{1,2}\b', target_slash_date, readme_content)
-              readme_content = re.sub(r'\b20\d{2}\d{2}\d{2}\b', target_compact_date, readme_content)
-
+              readme_content = re.sub(r'20\d{2}年\d{1,2}月\d{1,2}[日号]', target_full_chinese_date, readme_content)
+              readme_content = re.sub(r'\b\d{1,2}月\d{1,2}[日号]', target_chinese_date, readme_content)
               with open(readme_path, 'w', encoding='utf-8') as f:
                   f.write(readme_content)
-              print("Successfully updated README.md")
 
-          # ----------------- 3. 自动更新 free-nodes/index.htm (或 index.html) -----------------
+          # ----------------- 3. 智能分页收集所有文章并生成 index.htm 及 index1.htm... -----------------
+          # 收集所有已生成的文章，按日期降序排列
+          all_posts = []
+          for file in all_files:
+              bname = os.path.basename(file)
+              m = re.match(r'^(\d{4})-(\d{1,2})-(\d{1,2})', bname)
+              if m:
+                  y, mo, d = m.groups()
+                  dt = datetime.date(int(y), int(mo), int(d))
+                  all_posts.append((dt, bname))
+          
+          # 如果今天刚生成了新文章且不在列表里，补进去
           if new_basename:
-              for index_name in ["index.htm", "index.html"]:
-                  free_nodes_index = os.path.join(posts_dir, index_name)
-                  if os.path.exists(free_nodes_index):
-                      with open(free_nodes_index, 'r', encoding='utf-8') as f:
-                          idx_content = f.read()
-                      
-                      if new_basename not in idx_content:
-                          # 构造要插入的链接HTML条目
-                          new_link_html = f'<li><a href="{new_basename}">{target_chinese_date} 免费节点订阅地址</a></li>'
-                          if '<ul>' in idx_content:
-                              idx_content = idx_content.replace('<ul>', '<ul>\n    ' + new_link_html, 1)
-                          elif '<body>' in idx_content:
-                              idx_content = idx_content.replace('<body>', '<body>\n    <ul>\n    ' + new_link_html + '\n    </ul>', 1)
-                          else:
-                              idx_content = new_link_html + '\n' + idx_content
+              today_dt = datetime.date(int(today_year), int(today_month_no_zero), int(today_day_no_zero))
+              if not any(p[1] == new_basename for p in all_posts):
+                  all_posts.append((today_dt, new_basename))
 
-                          with open(free_nodes_index, 'w', encoding='utf-8') as f:
-                              f.write(idx_content)
-                          print(f"Successfully updated {free_nodes_index}")
+          all_posts.sort(key=lambda x: x[0], reverse=True)
 
-          # ----------------- 4. 自动更新根目录下的 index.htm (或 index.html) -----------------
-          if new_basename:
-              for index_name in ["index.htm", "index.html"]:
-                  if os.path.exists(index_name):
-                      with open(index_name, 'r', encoding='utf-8') as f:
-                          root_idx_content = f.read()
-                      
-                      sub_path = f"free-nodes/{new_basename}"
-                      if sub_path not in root_idx_content and new_basename not in root_idx_content:
-                          root_link_html = f'<li><a href="free-nodes/{new_basename}">{target_chinese_date} 免费节点订阅地址</a></li>'
-                          if '<ul>' in root_idx_content:
-                              root_idx_content = root_idx_content.replace('<ul>', '<ul>\n    ' + root_link_html, 1)
-                          elif '<body>' in root_idx_content:
-                              root_idx_content = root_idx_content.replace('<body>', '<body>\n    <ul>\n    ' + root_link_html + '\n    </ul>', 1)
-                          else:
-                              root_idx_content = root_link_html + '\n' + root_idx_content
+          # 每页最多 10 个卡片
+          page_size = 10
+          total_posts = len(all_posts)
+          total_pages = (total_posts + page_size - 1) // page_size
 
-                          with open(index_name, 'w', encoding='utf-8') as f:
-                              f.write(root_idx_content)
-                          print(f"Successfully updated root {index_name}")
+          # 获取一个基础模板（从现有的 index.htm 读取骨架）
+          base_index_path = os.path.join(posts_dir, "index.htm")
+          if not os.path.exists(base_index_path):
+              base_index_path = os.path.join(posts_dir, "index.html")
+
+          template_html = ""
+          if os.path.exists(base_index_path):
+              with open(base_index_path, 'r', encoding='utf-8') as f:
+                  template_html = f.read()
+          
+          # 如果模板里没有卡片容器，给个默认简单结构
+          if 'xcblog-blog-item' not in template_html:
+              template_html = '''<!DOCTYPE html>
+          <html>
+          <head><meta charset="utf-8"><title>免费节点订阅</title></head>
+          <body>
+              <div class="blog-list">
+              </div>
+          </body>
+          </html>'''
+
+          # 循环生成每一页 (index.htm, index1.htm, index2.htm ...)
+          for page_idx in range(total_pages):
+              start_idx = page_idx * page_size
+              end_idx = start_idx + page_size
+              page_posts = all_posts[start_idx:end_idx]
+
+              # 组装当前页的所有卡片 HTML
+              cards_html = ""
+              for dt, bname in page_posts:
+                  y_str, mo_str, d_str = str(dt.year), str(dt.month), str(dt.day)
+                  card_date_display = f"{mo_str}月{d_str}日"
+                  card_html = f'''    <div class="row content item xcblog-blog-item" data-date="{y_str}-{mo_str}-{d_str}">
+                      <div class="col-md-3">
+                          <a href="/clashnode/free-nodes/{bname}" class="xcblog-blog-url">
+                              <img src="/clashnode//uploads/20241122/c6a42b2aa92a2d63eaf82188b338cc1d.webp" alt="{card_date_display}→{random_speed_str}|{y_str}年最新免费节点clashnode订阅链接地址" style="width:100%;">
+                          </a>
+                      </div>
+                      <div class="col-md-9">
+                          <a href="/clashnode/free-nodes/{bname}" class="xcblog-blog-url">
+                          <h3>{card_date_display}→{random_speed_str}|{y_str}年最新免费节点clashnode订阅链接地址</h3>
+                          </a>
+                          <p>这一次的节点更新覆盖了新加坡、加拿大、香港、欧洲、美国、日本、韩国等地区,最高速度可达{random_speed_str}。只需复制下方的Clash/v2ray订阅链接,在客户端添加后即可正常使用。</p>
+                      </div>
+                  </div>\n'''
+                  cards_html += card_html
+
+              # 确定当前页的文件名
+              if page_idx == 0:
+                  current_filename = "index.htm"
+              else:
+                  current_filename = f"index{page_idx}.htm"
+
+              # 替换或写入页面内容
+              page_content = template_html
+              # 清除旧的卡片
+              page_content = re.sub(r'<div class="row content item xcblog-blog-item".*?</div>\s*</div>\s*</div>', '', page_content, flags=re.DOTALL)
+              
+              # 插入新卡片
+              if '<body>' in page_content:
+                  page_content = page_content.replace('<body>', '<body>\n' + cards_html, 1)
+
+              # 写入文件
+              page_file_path = os.path.join(posts_dir, current_filename)
+              with open(page_file_path, 'w', encoding='utf-8') as f:
+                  f.write(page_content)
+              print(f"Generated paging file: {page_file_path}")
+
+          print(f"Successfully managed {total_pages} index pages in {posts_dir}.")
           EOF
 
       - name: 提交并推送修改
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: auto-generate post, update dates and indexes"
+          commit_message: "chore: auto-generate post and handle 10-item pagination indexes"
           branch: main
