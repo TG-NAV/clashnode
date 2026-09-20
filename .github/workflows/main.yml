@@ -48,7 +48,8 @@ jobs:
           target_compact_date = f"{today_year}{today_month_zero}{today_day_zero}"
 
           new_basename = ""
-          random_speed_str = f"{round(random.uniform(10.0, 35.0), 1)}M/S"
+          # 预先生成一个当天文章要用的随机速度
+          current_random_speed = f"{round(random.uniform(10.0, 35.0), 1)}M/S"
 
           # ----------------- 1. 处理 free-nodes 目录下的最新文章 (.htm) -----------------
           all_files = glob.glob(os.path.join(posts_dir, "*.htm")) + glob.glob(os.path.join(posts_dir, "*.html")) + glob.glob(os.path.join(posts_dir, "*.md"))
@@ -87,14 +88,13 @@ jobs:
                       new_content = re.sub(r'\b20\d{2}/\d{1,2}/\d{1,2}\b', target_slash_date, new_content)
                       new_content = re.sub(r'\b20\d{2}\d{2}\d{2}\b', target_compact_date, new_content)
 
-                      def random_speed(match):
-                          nonlocal random_speed_str
-                          val = round(random.uniform(10.0, 35.0), 1)
+                      # 使用预先生成的随机速度替换文章中的测速
+                      def random_speed_replacer(match):
                           suffix = match.group(2)
-                          random_speed_str = f"{val}{suffix}"
-                          return random_speed_str
+                          val_num = current_random_speed.replace('M/S', '').replace('MB/s', '').replace('mbps', '')
+                          return f"{val_num}{suffix}"
 
-                      new_content = re.sub(r'\b\d+(\.\d+)?([Mm][Bb]?/[Ss]|[Mm][Bb][Pp][Ss])\b', random_speed, new_content)
+                      new_content = re.sub(r'\b\d+(\.\d+)?([Mm][Bb]?/[Ss]|[Mm][Bb][Pp][Ss])\b', random_speed_replacer, new_content)
 
                       with open(new_file, 'w', encoding='utf-8') as f:
                           f.write(new_content)
@@ -111,7 +111,6 @@ jobs:
                   f.write(readme_content)
 
           # ----------------- 3. 智能分页收集所有文章并生成 index.htm 及 index1.htm... -----------------
-          # 收集所有已生成的文章，按日期降序排列
           all_posts = []
           for file in all_files:
               bname = os.path.basename(file)
@@ -121,7 +120,6 @@ jobs:
                   dt = datetime.date(int(y), int(mo), int(d))
                   all_posts.append((dt, bname))
           
-          # 如果今天刚生成了新文章且不在列表里，补进去
           if new_basename:
               today_dt = datetime.date(int(today_year), int(today_month_no_zero), int(today_day_no_zero))
               if not any(p[1] == new_basename for p in all_posts):
@@ -129,12 +127,10 @@ jobs:
 
           all_posts.sort(key=lambda x: x[0], reverse=True)
 
-          # 每页最多 10 个卡片
           page_size = 10
           total_posts = len(all_posts)
           total_pages = (total_posts + page_size - 1) // page_size
 
-          # 获取一个基础模板（从现有的 index.htm 读取骨架）
           base_index_path = os.path.join(posts_dir, "index.htm")
           if not os.path.exists(base_index_path):
               base_index_path = os.path.join(posts_dir, "index.html")
@@ -144,7 +140,6 @@ jobs:
               with open(base_index_path, 'r', encoding='utf-8') as f:
                   template_html = f.read()
           
-          # 如果模板里没有卡片容器，给个默认简单结构
           if 'xcblog-blog-item' not in template_html:
               template_html = '''<!DOCTYPE html>
           <html>
@@ -155,13 +150,11 @@ jobs:
           </body>
           </html>'''
 
-          # 循环生成每一页 (index.htm, index1.htm, index2.htm ...)
           for page_idx in range(total_pages):
               start_idx = page_idx * page_size
               end_idx = start_idx + page_size
               page_posts = all_posts[start_idx:end_idx]
 
-              # 组装当前页的所有卡片 HTML
               cards_html = ""
               for dt, bname in page_posts:
                   y_str, mo_str, d_str = str(dt.year), str(dt.month), str(dt.day)
@@ -169,34 +162,29 @@ jobs:
                   card_html = f'''    <div class="row content item xcblog-blog-item" data-date="{y_str}-{mo_str}-{d_str}">
                       <div class="col-md-3">
                           <a href="/clashnode/free-nodes/{bname}" class="xcblog-blog-url">
-                              <img src="/clashnode//uploads/20241122/c6a42b2aa92a2d63eaf82188b338cc1d.webp" alt="{card_date_display}→{random_speed_str}|{y_str}年最新免费节点clashnode订阅链接地址" style="width:100%;">
+                              <img src="/clashnode//uploads/20241122/c6a42b2aa92a2d63eaf82188b338cc1d.webp" alt="{card_date_display}→{current_random_speed}|{y_str}年最新免费节点clashnode订阅链接地址" style="width:100%;">
                           </a>
                       </div>
                       <div class="col-md-9">
                           <a href="/clashnode/free-nodes/{bname}" class="xcblog-blog-url">
-                          <h3>{card_date_display}→{random_speed_str}|{y_str}年最新免费节点clashnode订阅链接地址</h3>
+                          <h3>{card_date_display}→{current_random_speed}|{y_str}年最新免费节点clashnode订阅链接地址</h3>
                           </a>
-                          <p>这一次的节点更新覆盖了新加坡、加拿大、香港、欧洲、美国、日本、韩国等地区,最高速度可达{random_speed_str}。只需复制下方的Clash/v2ray订阅链接,在客户端添加后即可正常使用。</p>
+                          <p>这一次的节点更新覆盖了新加坡、加拿大、香港、欧洲、美国、日本、韩国等地区,最高速度可达{current_random_speed}。只需复制下方的Clash/v2ray订阅链接,在客户端添加后即可正常使用。</p>
                       </div>
                   </div>\n'''
                   cards_html += card_html
 
-              # 确定当前页的文件名
               if page_idx == 0:
                   current_filename = "index.htm"
               else:
                   current_filename = f"index{page_idx}.htm"
 
-              # 替换或写入页面内容
               page_content = template_html
-              # 清除旧的卡片
               page_content = re.sub(r'<div class="row content item xcblog-blog-item".*?</div>\s*</div>\s*</div>', '', page_content, flags=re.DOTALL)
               
-              # 插入新卡片
               if '<body>' in page_content:
                   page_content = page_content.replace('<body>', '<body>\n' + cards_html, 1)
 
-              # 写入文件
               page_file_path = os.path.join(posts_dir, current_filename)
               with open(page_file_path, 'w', encoding='utf-8') as f:
                   f.write(page_content)
@@ -208,5 +196,5 @@ jobs:
       - name: 提交并推送修改
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: auto-generate post and handle 10-item pagination indexes"
+          commit_message: "chore: fix syntax error and update pagination indexes"
           branch: main
