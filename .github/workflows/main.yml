@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: 执行脚本生成文章、分页及索引
+      - name: 执行脚本生成文章、分页及索引导航
         run: |
           python - << 'EOF'
           import os
@@ -48,7 +48,6 @@ jobs:
           target_compact_date = f"{today_year}{today_month_zero}{today_day_zero}"
 
           new_basename = ""
-          # 预先生成一个当天文章要用的随机速度
           current_random_speed = f"{round(random.uniform(10.0, 35.0), 1)}M/S"
 
           # ----------------- 1. 处理 free-nodes 目录下的最新文章 (.htm) -----------------
@@ -88,7 +87,6 @@ jobs:
                       new_content = re.sub(r'\b20\d{2}/\d{1,2}/\d{1,2}\b', target_slash_date, new_content)
                       new_content = re.sub(r'\b20\d{2}\d{2}\d{2}\b', target_compact_date, new_content)
 
-                      # 使用预先生成的随机速度替换文章中的测速
                       def random_speed_replacer(match):
                           suffix = match.group(2)
                           val_num = current_random_speed.replace('M/S', '').replace('MB/s', '').replace('mbps', '')
@@ -110,7 +108,7 @@ jobs:
               with open(readme_path, 'w', encoding='utf-8') as f:
                   f.write(readme_content)
 
-          # ----------------- 3. 智能分页收集所有文章并生成 index.htm 及 index1.htm... -----------------
+          # ----------------- 3. 智能分页收集所有文章并生成 index 系列及分页导航 -----------------
           all_posts = []
           for file in all_files:
               bname = os.path.basename(file)
@@ -141,21 +139,24 @@ jobs:
                   template_html = f.read()
           
           if 'xcblog-blog-item' not in template_html:
-              template_html = '''<!DOCTYPE html>
-          <html>
-          <head><meta charset="utf-8"><title>免费节点订阅</title></head>
-          <body>
-              <div class="blog-list">
-              </div>
-          </body>
-          </html>'''
+              template_html = '<!DOCTYPE html>\n<html>\n<head><meta charset="utf-8"></head>\n<body>\n</body>\n</html>'
+
+          # 为后续替换做准备：清理模板中的旧卡片和旧翻页
+          if '<!-- XCBLOG_CARDS_START -->' in template_html:
+              # 如果已经有了我们定义的注释标记，精准清理
+              clean_template = re.sub(r'<!-- XCBLOG_CARDS_START -->.*?<!-- XCBLOG_PAGINATION_END -->', '%%PLACEHOLDER%%', template_html, flags=re.DOTALL)
+          else:
+              # 初次运行：替换掉旧卡片区块，并在对应位置插入占位符
+              clean_template = re.sub(r'<div class="row content item xcblog-blog-item".*?</div>\s*</div>', '%%PLACEHOLDER%%', template_html, count=1, flags=re.DOTALL)
+              clean_template = re.sub(r'<div class="row content item xcblog-blog-item".*?</div>\s*</div>', '', clean_template, flags=re.DOTALL)
 
           for page_idx in range(total_pages):
               start_idx = page_idx * page_size
               end_idx = start_idx + page_size
               page_posts = all_posts[start_idx:end_idx]
 
-              cards_html = ""
+              # 3.1 组装该页的 10 个卡片
+              cards_html = "<!-- XCBLOG_CARDS_START -->\n"
               for dt, bname in page_posts:
                   y_str, mo_str, d_str = str(dt.year), str(dt.month), str(dt.day)
                   card_date_display = f"{mo_str}月{d_str}日"
@@ -173,28 +174,52 @@ jobs:
                       </div>
                   </div>\n'''
                   cards_html += card_html
+              cards_html += "<!-- XCBLOG_CARDS_END -->\n"
 
+              # 3.2 组装底部分页导航条 (1, 2, 3...)
+              pagination_html = "<!-- XCBLOG_PAGINATION_START -->\n"
+              pagination_html += '<div class="xcblog-pagination" style="text-align: center; margin: 30px 0;">\n'
+              pagination_html += '  <ul class="pagination" style="display: inline-flex; list-style: none; padding: 0; gap: 8px; font-size: 16px;">\n'
+              
+              for p in range(total_pages):
+                  page_num = p + 1
+                  link = "index.htm" if p == 0 else f"index{p}.htm"
+                  
+                  if p == page_idx:
+                      # 当前激活页，使用蓝色高亮且无法点击
+                      pagination_html += f'    <li><span style="padding: 6px 14px; background: #007bff; color: white; border-radius: 4px; font-weight: bold;">{page_num}</span></li>\n'
+                  else:
+                      # 其他页，添加灰色边框和跳转链接
+                      pagination_html += f'    <li><a href="{link}" style="padding: 6px 14px; border: 1px solid #ddd; text-decoration: none; border-radius: 4px; color: #333; background: #fff;">{page_num}</a></li>\n'
+              
+              pagination_html += '  </ul>\n</div>\n'
+              pagination_html += "<!-- XCBLOG_PAGINATION_END -->"
+
+              # 3.3 把文章和分页导航写入对应的网页中
+              full_content_block = cards_html + pagination_html
+              page_content = clean_template
+              
+              if '%%PLACEHOLDER%%' in page_content:
+                  page_content = page_content.replace('%%PLACEHOLDER%%', full_content_block)
+              elif '<body>' in page_content:
+                  page_content = page_content.replace('<body>', '<body>\n' + full_content_block)
+
+              # 决定生成文件的名称
               if page_idx == 0:
                   current_filename = "index.htm"
               else:
                   current_filename = f"index{page_idx}.htm"
-
-              page_content = template_html
-              page_content = re.sub(r'<div class="row content item xcblog-blog-item".*?</div>\s*</div>\s*</div>', '', page_content, flags=re.DOTALL)
-              
-              if '<body>' in page_content:
-                  page_content = page_content.replace('<body>', '<body>\n' + cards_html, 1)
 
               page_file_path = os.path.join(posts_dir, current_filename)
               with open(page_file_path, 'w', encoding='utf-8') as f:
                   f.write(page_content)
               print(f"Generated paging file: {page_file_path}")
 
-          print(f"Successfully managed {total_pages} index pages in {posts_dir}.")
+          print(f"Successfully generated {total_pages} pages with pagination.")
           EOF
 
       - name: 提交并推送修改
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: fix syntax error and update pagination indexes"
+          commit_message: "chore: update pagination logic with bottom navigation links"
           branch: main
