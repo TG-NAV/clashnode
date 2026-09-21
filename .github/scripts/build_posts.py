@@ -157,7 +157,7 @@ for page_idx in range(total_pages):
                     <div class="blog-card-single">
                         <div class="grids5-info position-relative">
                             <a href="{bname}" class="xcblog-blog-url">
-                                <img src="/uploads/20240303/c229319f003c678f95dcfe7dd91da87f.webp" alt="{card_date_display}|{current_random_speed}，最新高速免费节点，Clash节点/Singbox节点/SSR节点/Shadowrocket节点/V2ray节点订阅链接地址，科学上网" class="img-fluid" />
+                                <img src="/uploads/20241122/9da3a6da55f6d60aafd21424ff7b5551.jpg" alt="{card_date_display}|{current_random_speed}，最新高速免费节点，Clash节点/Singbox节点/SSR节点/Shadowrocket节点/V2ray节点订阅链接地址，科学上网" class="img-fluid" />
                             </a>
                         </div>
                         <div class="content-main-top">
@@ -241,7 +241,7 @@ if root_index_path:
                     <div class="blog-card-single">
                         <div class="grids5-info position-relative">
                             <a href="{sub_bname}" class="xcblog-blog-url">
-                                <img src="/uploads/20240303/c229319f003c678f95dcfe7dd91da87f.webp" alt="{card_date_display}|{current_random_speed}，最新高速免费节点，Clash节点/Singbox节点/SSR节点/Shadowrocket节点/V2ray节点订阅链接地址，科学上网" class="img-fluid" />
+                                <img src="/uploads/20241122/9da3a6da55f6d60aafd21424ff7b5551.jpg" alt="{card_date_display}|{current_random_speed}，最新高速免费节点，Clash节点/Singbox节点/SSR节点/Shadowrocket节点/V2ray节点订阅链接地址，科学上网" class="img-fluid" />
                             </a>
                         </div>
                         <div class="content-main-top">
